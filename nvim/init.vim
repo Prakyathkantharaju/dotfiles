@@ -1,0 +1,1 @@
+/home/prakyath/.config/nvim/init.vim
