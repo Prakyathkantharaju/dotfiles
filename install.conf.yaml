@@ -7,7 +7,7 @@
 - link:
     ~/.tmux.conf: tmux
     ~/.vim: vim
-    ~/.vimrc: vimrc
+    ~/.config/alacritty: alacritty
 
 - create:
     - ~/.vim/undo-history
