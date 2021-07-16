@@ -14,7 +14,7 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: 0.9
+background_opacity: 0.95
 
 font:
   normal:
@@ -51,7 +51,7 @@ cursor:
 
 mouse:
   hide_when_typing: true
-  url:
+  hints:
     launcher:
       program: xdg-open
       args: []

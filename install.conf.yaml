@@ -5,9 +5,15 @@
 - clean: ['~']
 
 - link:
-    ~/.tmux.conf: tmux
     ~/.vim: vim
-    ~/.config/alacritty: alacritty
+    ~/.vim/nvim/init.vim:
+      relink: true
+      force: true
+      path: vim/init.vim
+    ~/.config/alacritty:
+      path: alacritty
+      force: true
+      relink: true
 
 - create:
     - ~/.vim/undo-history
