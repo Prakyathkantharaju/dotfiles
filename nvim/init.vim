@@ -37,8 +37,6 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
 
-" autocomplete
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " git
 Plug 'tpope/vim-fugitive'
 " undotree
@@ -76,6 +74,8 @@ Plug 'SkyLeach/pudb.vim'
 Plug 'dense-analysis/ale'
 " vim matlab
 Plug 'lazywei/vim-matlab'
+" github copilot
+Plug 'github/copilot.vim'
 call plug#end()
 
 
@@ -112,8 +112,6 @@ let g:netrw_browse_split = 2
 let g:vrfr_rg = 'true'
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
-" kite tab complete
-let g:kite_tab_complete = 1
 " ale autocomplete
 let g:ale_completion_enabled = 1
 "
@@ -153,26 +151,10 @@ function! s:check_back_space() abort
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ coc#refresh()
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-inoremap <silent><expr> <C-space> coc#refresh()
 
-" GoTo code navigation.
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gy <Plug>(coc-type-definition)
-nmap <leader>gi <Plug>(coc-implementation)
-nmap <leader>gr <Plug>(coc-references)
-nmap <leader>rr <Plug>(coc-rename)
-nmap <leader>g[ <Plug>(coc-diagnostic-prev)
-nmap <leader>g] <Plug>(coc-diagnostic-next)
-nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
-nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
-nnoremap <leader>cr :CocRestart
 
 " Sweet Sweet FuGITive
 nmap <leader>gh :diffget //3<CR>
