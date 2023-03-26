@@ -14,24 +14,32 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: 0.95
+window.opacity: 0.95
 
 font:
+  # Normal (roman) font face
   normal:
-    family: monospace
+    family: Hack Nerd Font Mono
     style: Regular
 
+  # Bold font face
   bold:
-    family: monospace
+    family: Hack Nerd Font Mono
     style: Bold
 
+  # Italic font face
   italic:
-    family: monospace
+    family: Hack Nerd Font Mono
     style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: Hack Nerd Font Mono
+    style: Bold Italic
   size: 12.0
 
   bold_italic:
-    family: monospace
+    family: Hack Nerk Font Mono
     style: Bold Italic
 
   offset:
@@ -75,7 +83,7 @@ colors:
     focused_match:
       foreground: '0x44475a'
       background: '0xffb86c'
-    bar:
+    colors.footer_bar:
       background: '0x282a36'
       foreground: '0xf8f8f2'
   line_indicator:
